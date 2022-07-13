@@ -1,0 +1,269 @@
+* { margin: 0; padding: 0; }
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: 1.5rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1rem; }
+
+.title-sub {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.bg-overlay:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.no-margin { margin: 0; }
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .logo {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+header .logo img {
+  display: block;
+  max-height: 40px;
+  width: auto;
+}
+
+header .logo span {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  z-index: 2;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 300ms linear;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav li {
+  margin-bottom: 40px;
+}
+
+header nav a {
+  color: #000;
+}
+
+header nav .mobile-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 60px;
+  line-height: 60px;
+  width: 60px;
+}
+
+header .mobile-hamburger {
+  display: block;
+  width: 40px;
+}
+
+header .mobile-hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 8px;
+  background-color: black;
+}
+
+header .mobile-hamburger span:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  header .mobile-hamburger, header nav .mobile-close { display: none; }
+  header nav {
+    font-size: 1.5rem;
+    position: relative;
+    top: unset;
+    left: unset;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transition: none;
+  }
+  header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  header nav li {
+    margin-bottom: 0;
+  }
+}
+
+section, main {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+section .content, main .content {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.about-me {
+  position: relative;
+  background: url("../../images/code-banner.jpg") 0 0 no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.skills h4 {
+  margin-bottom: 0;
+}
+
+.skills .product {
+  margin-bottom: 2rem;
+}
+
+.skills .product:last-of-type {
+  margin-bottom: 0;
+}
+
+.skills .products img {
+  max-height: 200px;
+  width: auto;
+}
+
+@media only screen and (min-width: 480px) {
+  .skills .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .skills .product {
+    margin-bottom: 0;
+  }
+}
+
+.companies {
+  position: relative;
+  background: url("../../images/join-our-team-bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.companies img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.companies .company {
+  margin-bottom: 2.5rem;
+}
+
+.companies .company:last-of-type {
+  margin-bottom: 0;
+}
+
+.companies h4 {
+  margin: .5rem 0;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 480px) {
+  .companies .companies-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .companies .company {
+    max-width: calc((100% - 4rem) / 2);
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .companies .company {
+    max-width: calc((100% - 8rem) / 3);
+  }
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+}
+
+footer h2, footer h3 {
+  font-weight: 300;
+}
+
+footer h2 {
+  font-size: 2rem;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+}
+
+footer .footer-top {
+  background-color: #111;
+  padding: 2rem;
+}
+
+footer .copyright {
+  background-color: #222;
+  padding: 1rem 2rem;
+}
+
+footer a {
+  color: #fff;
+}
